@@ -7,7 +7,7 @@ export default {
         type: {
             control: { type: "radio" },
             defaultValue: "polka",
-            options: ["cross", "polka", "polkav2", "rectangle"],
+            options: ["polka", "polkav2", "rectangle"],
         },
     },
 };
