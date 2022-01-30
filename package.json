@@ -38,8 +38,7 @@
     "sideEffects": false,
     "repository": {
         "type": "git",
-        "url": "https://github.com/SamuelAlev/parced.git",
-        "directory": "packages/ui"
+        "url": "https://github.com/parced/ui.git"
     },
     "scripts": {
         "build": "npm run clean && npm run build:library && npm run build:types",
