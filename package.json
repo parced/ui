@@ -1,0 +1,92 @@
+{
+    "name": "@parced/ui",
+    "description": "A UI framework for Vue.js ",
+    "version": "0.0.3",
+    "keywords": [
+        "parced ui",
+        "ui framework",
+        "ui library",
+        "vue ui",
+        "vue3",
+        "vue framework",
+        "ui"
+    ],
+    "license": "MIT",
+    "author": {
+        "name": "Samuel Alev",
+        "email": "samuel.alev@protonmail.com"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "main": "dist/parced-ui.umd.js",
+    "unpkg": "dist/parced-ui.umd.js",
+    "jsdelivr": "dist/parced-ui.umd.js",
+    "module": "dist/parced-ui.es.js",
+    "types": "dist/types/parced-ui.d.ts",
+    "exports": {
+        "./dist/parced-ui.css": "./dist/parced-ui.css",
+        "./dist/parced-ui.cjs.js": "./dist/parced-ui.cjs.js",
+        ".": {
+            "import": "./dist/parced-ui.es.js",
+            "require": "./dist/parced-ui.umd.js"
+        }
+    },
+    "files": [
+        "dist"
+    ],
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SamuelAlev/parced.git",
+        "directory": "packages/ui"
+    },
+    "scripts": {
+        "build": "npm run clean && npm run build:library && npm run build:types",
+        "build:library": "vite build",
+        "build:storybook": "build-storybook",
+        "build:types": "vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
+        "clean": "rimraf dist",
+        "dev": "start-storybook -p 6006 --no-open",
+        "test": "vitest",
+        "test:ci": "vitest --run"
+    },
+    "devDependencies": {
+        "@parced/eslint-config": "*",
+        "@storybook/addon-a11y": "6.5.0-alpha.28",
+        "@storybook/addon-actions": "6.5.0-alpha.28",
+        "@storybook/addon-essentials": "6.5.0-alpha.28",
+        "@storybook/addon-links": "6.5.0-alpha.28",
+        "@storybook/addons": "6.5.0-alpha.28",
+        "@storybook/theming": "6.5.0-alpha.28",
+        "@storybook/vue3": "6.5.0-alpha.28",
+        "@types/node": "17.0.13",
+        "@vitejs/plugin-vue": "2.1.0",
+        "@vue/test-utils": "2.0.0-rc.18",
+        "autoprefixer": "10.4.2",
+        "eslint": "8.8.0",
+        "jsdom": "19.0.0",
+        "postcss": "8.4.5",
+        "prettier": "2.5.1",
+        "rimraf": "3.0.2",
+        "storybook-builder-vite": "0.1.14",
+        "storybook-dark-mode": "1.0.8",
+        "tailwindcss": "3.0.18",
+        "ts-node": "10.4.0",
+        "typescript": "4.5.5",
+        "vite": "2.7.13",
+        "vitest": "0.2.5",
+        "vue": "3.2.29",
+        "vue-tsc": "0.31.1"
+    },
+    "dependencies": {
+        "@heroicons/vue": "1.0.5",
+        "@parced/fonts": "^0.0.1",
+        "focus-trap": "^6.7.2",
+        "focus-trap-vue": "^3.2.1",
+        "uid": "2.0.0"
+    },
+    "peerDependencies": {
+        "vue": "^3.2.25"
+    }
+}

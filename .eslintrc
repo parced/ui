@@ -1,0 +1,3 @@
+{
+    "extends": "@parced/eslint-config"
+}

@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "useDefineForClassFields": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "strict": true,
+        "sourceMap": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "outDir": "dist",
+        "declaration": true,
+        "lib": ["esnext", "dom"],
+        "types": ["node"],
+        "paths": {
+            "@components/*": ["./src/components/*"],
+            "@utilities/*": ["./src/utilities/*"]
+        }
+    },
+    "include": ["vite.config.*", "env.d.ts", "src/**/*", "src/**/*.vue"],
+    "exclude": ["**/*.stories.ts", "**/*.spec.ts"]
+}
