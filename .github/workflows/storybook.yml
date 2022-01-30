@@ -7,7 +7,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout latest commit
-              uses: actions/checkout@v1
+              uses: actions/checkout@v2
 
             - name: Setup Node
               uses: actions/setup-node@v2
@@ -19,8 +19,13 @@ jobs:
             - name: Install npm dependencies
               run: npm install
 
-            - name: Deploy to Chromatic
-              uses: chromaui/action@v1
+            - name: Build Storybook
+              run: npm run build:storybook
+
+            - name: Deploy to GitHub Pages
+              uses: peaceiris/actions-gh-pages@v3
               with:
-                  projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-                  token: ${{ secrets.GITHUB_TOKEN }}
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./storybook-static
+                  force_orphan: true
+                  cname: components.frontify.com
