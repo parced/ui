@@ -28,4 +28,4 @@ jobs:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./storybook-static
                   force_orphan: true
-                  cname: components.frontify.com
+                  cname: storybook.parced.app
