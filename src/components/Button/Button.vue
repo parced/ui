@@ -6,7 +6,6 @@
             sizeMap[size],
             block && 'w-full',
             disabled ? `${disabledVariantMap[variant]} cursor-not-allowed` : variantMap[variant],
-            loading && 'cursor-auto',
             !disabled &&
                 !loading &&
                 `${actionsVariantMap[variant]} ${FOCUS_OUTLINE_CLASSES} shadow-md active:shadow-none`,
@@ -78,8 +77,8 @@ const disabledVariantMap: Record<Exclude<ButtonProps["variant"], undefined>, str
 };
 
 const loaderVariantMap: Record<Exclude<ButtonProps["variant"], undefined>, LoaderProps["variant"]> = {
-    primary: "inverted",
-    secondary: "inverted",
-    outlined: "primary",
+    primary: "primary",
+    secondary: "secondary",
+    outlined: "inverted-secondary",
 };
 </script>

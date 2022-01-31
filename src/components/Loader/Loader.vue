@@ -23,7 +23,7 @@ import { computed } from "vue";
 
 export type LoaderProps = {
     size?: "small" | "medium" | "large";
-    variant?: "primary" | "inverted";
+    variant?: "primary" | "secondary" | "inverted-secondary";
     disabled?: boolean;
 };
 
@@ -36,8 +36,9 @@ const sizeMap: Record<Exclude<LoaderProps["size"], undefined>, string> = {
 };
 
 const variantMap: Record<Exclude<LoaderProps["variant"], undefined>, string> = {
-    primary: "text-black dark:text-white",
-    inverted: "text-white dark:text-black",
+    primary: "text-white",
+    secondary: "text-white dark:text-black",
+    "inverted-secondary": "text-black dark:text-white",
 };
 
 const titleId = computed(() => uid());
