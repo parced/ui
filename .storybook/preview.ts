@@ -1,8 +1,12 @@
 import "@parced/fonts";
 import "../src/styles.css";
 import { light, dark } from "./parcedTheme";
+import { DocsContainer } from "./components/DocContainer";
 
 export const parameters = {
+    docs: {
+        container: DocsContainer,
+    },
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
         matchers: {
