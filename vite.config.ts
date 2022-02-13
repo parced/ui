@@ -25,7 +25,7 @@ export default defineConfig({
             name: "ParcedUI",
         },
         rollupOptions: {
-            external: ["vue", "@heroicons/vue/outline", "@parced/fonts", "focus-trap", "focus-trap-vue", "uid"],
+            external: ["vue", "@heroicons/vue/outline", "@parced/fonts", "focus-trap", "focus-trap-vue", "uid/single"],
             output: {
                 assetFileNames: (chunkInfo: PreRenderedAsset): string => {
                     if (chunkInfo.name === "style.css") {
