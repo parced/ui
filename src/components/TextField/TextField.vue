@@ -1,6 +1,9 @@
 <template>
     <label
-        :class="['flex-col gap-2 font-normal text-black dark:text-white transition-colors ease-in duration-200', block ? 'flex' : 'inline-flex']"
+        :class="[
+            'flex-col gap-2 font-normal text-black dark:text-white transition-colors ease-in duration-200',
+            block ? 'flex' : 'inline-flex',
+        ]"
         :for="inputId"
     >
         <InputLabel :size="size" :required="required" :disabled="disabled" :readonly="readonly">{{ label }}</InputLabel>
@@ -27,8 +30,9 @@
             :aria-errormessage="variant === 'error' ? helperId : undefined"
             :aria-describedby="variant !== 'error' ? helperId : undefined"
             data-test-id="text-field-input"
-            @input="(event) => emitInputUpdate(event, 'input')"
+            @blur="(event) => emitInputUpdate(event, 'blur')"
             @change="(event) => emitInputUpdate(event, 'change')"
+            @input="(event) => emitInputUpdate(event, 'input')"
         />
 
         <Text
@@ -66,6 +70,7 @@ export type TextFieldProps = {
 };
 
 export type TextFieldEvents = {
+    (event: "blur", value: string): void;
     (event: "change", value: string): void;
     (event: "input", value: string): void;
 };
@@ -84,7 +89,7 @@ const {
 } = defineProps<TextFieldProps>();
 const emit = defineEmits<TextFieldEvents>();
 
-const emitInputUpdate = (event: Event, eventName: "change" | "input") => {
+const emitInputUpdate = (event: Event, eventName: "blur" | "change" | "input") => {
     if (readonly || disabled) {
         return;
     }

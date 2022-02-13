@@ -27,6 +27,7 @@ export default {
         readonly: { type: { name: "boolean", required: false }, defaultValue: false },
         block: { type: { name: "boolean", required: false }, defaultValue: false },
         required: { type: { name: "boolean", required: false }, defaultValue: false },
+        onBlur: { action: "onBlur" },
         onChange: { action: "onChange" },
         onInput: { action: "onInput" },
     },
