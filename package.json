@@ -1,7 +1,7 @@
 {
     "name": "@parced/ui",
     "description": "A UI framework for Vue.js ",
-    "version": "0.0.3",
+    "version": "0.1.0",
     "keywords": [
         "parced ui",
         "ui framework",
