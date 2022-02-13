@@ -47,11 +47,13 @@
         "build:types": "vue-tsc --emitDeclarationOnly && mv dist/src dist/types",
         "clean": "rimraf dist",
         "dev": "start-storybook -p 6006 --no-open",
+        "lint": "eslint src",
+        "lint:fix": "eslint src --fix",
         "test": "vitest",
         "test:ci": "vitest --run"
     },
     "devDependencies": {
-        "@parced/eslint-config": "*",
+        "@parced/eslint-config": "^0.1.0",
         "@storybook/addon-a11y": "6.5.0-alpha.39",
         "@storybook/addon-actions": "6.5.0-alpha.39",
         "@storybook/addon-docs": "6.5.0-alpha.39",
