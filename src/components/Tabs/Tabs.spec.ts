@@ -1,5 +1,4 @@
 import { describe, expect, it } from "vitest";
-import { mount } from "@vue/test-utils";
 
 // TODO: TESTS TESTS TESTS
 describe.skip("Tabs component", () => {

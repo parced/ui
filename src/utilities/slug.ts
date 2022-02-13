@@ -2,7 +2,7 @@ export const slugify = (value: string): string => {
     return value
         .normalize("NFKD")
         .toLowerCase()
-        .replace(/[^\w\s-]/g, "")
+        .replace(/[^\s\w-]/g, "")
         .trim()
-        .replace(/[-\s]+/g, "-");
+        .replace(/[\s-]+/g, "-");
 };
