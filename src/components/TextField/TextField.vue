@@ -89,7 +89,7 @@ const {
 } = defineProps<TextFieldProps>();
 const emit = defineEmits<TextFieldEvents>();
 
-const emitInputUpdate = (event: Event, eventName: "blur" | "change" | "input") => {
+const emitInputUpdate = (event: Event, eventName: string) => {
     if (readonly || disabled) {
         return;
     }
@@ -118,6 +118,5 @@ const helperSizeMap: Record<Exclude<TextFieldProps["size"], undefined>, TextProp
 };
 
 const inputId = computed(() => uid());
-const labelId = computed(() => uid());
 const helperId = computed(() => uid());
 </script>
