@@ -6,14 +6,10 @@
             sizeMap[size],
             block && 'w-full',
             disabled ? `${disabledVariantMap[variant]} cursor-not-allowed` : variantMap[variant],
-            !disabled &&
-                !loading &&
-                `${actionsVariantMap[variant]} ${FOCUS_OUTLINE_CLASSES} shadow-md active:shadow-none`,
+            !disabled && !loading && `${actionsVariantMap[variant]} ${FOCUS_OUTLINE_CLASSES}`,
         ]"
         :tabindex="disabled || loading ? -1 : 0"
         @click="!disabled && !loading && onClick()"
-        @keydown.enter="!disabled && !loading && onClick()"
-        @keydown.space="!disabled && !loading && onClick()"
     >
         <div v-if="loading" :class="[loading && 'invisible']">
             <slot />
@@ -31,7 +27,7 @@ import { FOCUS_OUTLINE_CLASSES } from "@utilities/focus";
 
 export type ButtonProps = {
     size?: "small" | "medium" | "large";
-    variant?: "primary" | "secondary" | "outlined";
+    variant?: "primary" | "secondary" | "outlined" | "clear";
     loading?: boolean;
     disabled?: boolean;
     block?: boolean;
@@ -62,23 +58,30 @@ const variantMap: Record<Exclude<ButtonProps["variant"], undefined>, string> = {
     primary: "text-white bg-blue-500 dark:bg-blue-700 border border-transparent",
     secondary: "text-white dark:text-black bg-gray-600 dark:bg-gray-100 border border-transparent",
     outlined: "text-black bg-transparent border border-gray-600 dark:border-white dark:text-white",
+    clear: "text-blue-500 bg-transparent border border-transparent",
 };
 
 const actionsVariantMap: Record<Exclude<ButtonProps["variant"], undefined>, string> = {
-    primary: "hover:bg-blue-600 dark:hover:bg-blue-800 active:bg-blue-700 dark:active:bg-blue-900",
-    secondary: "hover:bg-gray-700 dark:hover:bg-gray-200 active:bg-black dark:active:bg-gray-300",
-    outlined: "hover:border-gray-800 dark:hover:border-gray-200 active:border-black dark:active:border-gray-300",
+    primary:
+        "hover:bg-blue-600 dark:hover:bg-blue-800 active:bg-blue-700 dark:active:bg-blue-900 shadow-md active:shadow-none",
+    secondary:
+        "hover:bg-gray-700 dark:hover:bg-gray-200 active:bg-black dark:active:bg-gray-300 shadow-md active:shadow-none",
+    outlined:
+        "hover:border-gray-800 dark:hover:border-gray-200 active:border-black dark:active:border-gray-300 shadow-md active:shadow-none",
+    clear: "hover:text-blue-600 active:text-blue-700",
 };
 
 const disabledVariantMap: Record<Exclude<ButtonProps["variant"], undefined>, string> = {
     primary: "bg-gray-200 text-gray-400 border border-transparent",
     secondary: "bg-gray-200 text-gray-400 border border-transparent",
     outlined: "bg-transparent border border-gray-400 text-gray-400 hover:border-gray-400",
+    clear: "border border-transparent text-gray-400",
 };
 
 const loaderVariantMap: Record<Exclude<ButtonProps["variant"], undefined>, LoaderProps["variant"]> = {
     primary: "primary",
     secondary: "secondary",
     outlined: "inverted-secondary",
+    clear: "secondary",
 };
 </script>

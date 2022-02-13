@@ -62,6 +62,6 @@ Button.argTypes = {
     variant: {
         control: { type: "radio" },
         defaultValue: "primary",
-        options: ["primary", "secondary", "outlined"],
+        options: ["primary", "secondary", "outlined", "clear"],
     },
 };
