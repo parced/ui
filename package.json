@@ -71,7 +71,7 @@
         "postcss": "8.4.6",
         "prettier": "2.5.1",
         "rimraf": "3.0.2",
-        "storybook-builder-vite": "0.1.15",
+        "storybook-builder-vite": "0.1.16",
         "storybook-dark-mode": "1.0.8",
         "tailwindcss": "3.0.22",
         "ts-node": "10.5.0",
