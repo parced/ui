@@ -5,11 +5,7 @@ export default {
     title: "Components/Checkbox",
     component: PcCheckbox,
     argTypes: {
-        value: {
-            control: { type: "radio" },
-            defaultValue: false,
-            options: [true, false],
-        },
+        value: { type: { name: "boolean", required: false }, defaultValue: false },
         size: {
             control: { type: "radio" },
             defaultValue: "medium",

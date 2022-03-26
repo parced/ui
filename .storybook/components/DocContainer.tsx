@@ -3,7 +3,7 @@ import { DocsContainer as BaseContainer } from "@storybook/addon-docs/blocks";
 import { useDarkMode } from "storybook-dark-mode";
 import { themes } from "@storybook/theming";
 
-export const DocsContainer = ({ children, context }) => {
+export const DocsContainer: typeof BaseContainer = ({ children, context }) => {
     const dark = useDarkMode();
 
     return (
