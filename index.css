@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Manrope VF";
+    src: url("./assets/variable/Manrope[wght].woff2") format("woff2-variations"),
+        url("./assets/variable/Manrope[wght].ttf") format("truetype-variations");
+    font-style: normal;
+    font-variation-settings: "wght" 500;
+    font-variation-ligatures: normal;
+    font-weight: 200 800;
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url("./assets/web/Manrope-ExtraLight.woff2") format("woff2");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url("./assets/web/Manrope-Light.woff2") format("woff2");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url("./assets/web/Manrope-Regular.woff2") format("woff2");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url("./assets/web/Manrope-Medium.woff2") format("woff2");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url("./assets/web/Manrope-SemiBold.woff2") format("woff2");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url("./assets/web/Manrope-Bold.woff2") format("woff2");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Manrope;
+    src: url("./assets/web/Manrope-ExtraBold.woff2") format("woff2");
+    font-weight: 800;
+}

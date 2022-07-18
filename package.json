@@ -1,0 +1,22 @@
+{
+    "name": "@parced/fonts",
+    "version": "0.0.1",
+    "main": "index.css",
+    "author": {
+        "name": "Samuel Alev",
+        "email": "samuel.alev@protonmail.com"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "files": [
+        "index.css",
+        "assets"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SamuelAlev/parced.git",
+        "directory": "packages/fonts"
+    },
+    "gitHead": "5504d24b7006ff591de4e5bdbb31191d92d0c174"
+}

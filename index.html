@@ -1,0 +1,109 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>Webpack App</title><meta name="viewport" content="width=device-width,initial-scale=1"/><style>html, body {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }</style><script>/* globals window */
+  /* eslint-disable no-underscore-dangle */
+  try {
+    if (window.top !== window) {
+      window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.top.__REACT_DEVTOOLS_GLOBAL_HOOK__;
+    }
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.warn('unable to connect to top frame for connecting dev tools');
+  }
+
+  window.onerror = function onerror(message, source, line, column, err) {
+    if (window.CONFIG_TYPE !== 'DEVELOPMENT') return;
+    // eslint-disable-next-line no-var, vars-on-top
+    var xhr = new window.XMLHttpRequest();
+    xhr.open('POST', '/runtime-error');
+    xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+    xhr.send(
+      JSON.stringify({
+        /* eslint-disable object-shorthand */
+        message: message,
+        source: source,
+        line: line,
+        column: column,
+        error: err && { message: err.message, name: err.name, stack: err.stack },
+        origin: 'manager',
+        /* eslint-enable object-shorthand */
+      })
+    );
+  };</script><link rel="icon" href="logo.svg" id="light-scheme-icon"/><link rel="icon" href="logo_dark.svg" id="dark-scheme-icon"/><style>@font-face {
+        font-family: "Manrope VF";
+        src: url("/assets/variable/Manrope[wght].woff2") format("woff2-variations"),
+            url("/assets/variable/Manrope[wght].ttf") format("truetype-variations");
+        font-style: normal;
+        font-variation-settings: "wght" 500;
+        font-variation-ligatures: normal;
+        font-weight: 200 800;
+    }
+
+    @font-face {
+        font-family: Manrope;
+        src: url("/assets/web/Manrope-ExtraLight.woff2") format("woff2");
+        font-weight: 200;
+    }
+
+    @font-face {
+        font-family: Manrope;
+        src: url("/assets/web/Manrope-Light.woff2") format("woff2");
+        font-weight: 300;
+    }
+
+    @font-face {
+        font-family: Manrope;
+        src: url("/assets/web/Manrope-Regular.woff2") format("woff2");
+        font-weight: 400;
+    }
+
+    @font-face {
+        font-family: Manrope;
+        src: url("/assets/web/Manrope-Medium.woff2") format("woff2");
+        font-weight: 500;
+    }
+
+    @font-face {
+        font-family: Manrope;
+        src: url("/assets/web/Manrope-SemiBold.woff2") format("woff2");
+        font-weight: 600;
+    }
+
+    @font-face {
+        font-family: Manrope;
+        src: url("/assets/web/Manrope-Bold.woff2") format("woff2");
+        font-weight: 700;
+    }
+
+    @font-face {
+        font-family: Manrope;
+        src: url("/assets/web/Manrope-ExtraBold.woff2") format("woff2");
+        font-weight: 800;
+    }</style><style>#root[hidden],
+      #docs-root[hidden] {
+        display: none !important;
+      }</style></head><body><div id="root"></div><div id="docs-root"></div><script>window['CONFIG_TYPE'] = "PRODUCTION";
+          
+      
+          
+            window['LOGLEVEL'] = "info";
+          
+      
+          
+            window['FEATURES'] = {"postcss":true,"emotionAlias":false,"warnOnLegacyHierarchySeparator":true,"buildStoriesJson":false,"storyStoreV7":false,"modernInlineRender":false,"breakingChangesV7":false,"interactionsDebugger":false,"babelModeV7":false,"argTypeTargetsV7":false,"previewMdx2":false};
+          
+      
+          
+      
+          
+      
+          
+            window['DOCS_MODE'] = false;</script><script src="runtime~main.54ed1783a911a3ffa4eb.manager.bundle.js"></script><script src="vendors~main.8c1ff02080f9ed6c9556.manager.bundle.js"></script><script src="main.b2ca0a0de2396e09425c.manager.bundle.js"></script></body></html>
